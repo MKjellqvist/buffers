@@ -1,0 +1,3 @@
+/home/martin/ver/kod/c++/prmet_2023/cmake-build-debug/CMakeFiles/tmp.dir
+/home/martin/ver/kod/c++/prmet_2023/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/martin/ver/kod/c++/prmet_2023/cmake-build-debug/CMakeFiles/rebuild_cache.dir
