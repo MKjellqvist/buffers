@@ -36,7 +36,7 @@ private:
 
 int main() {
     buffer b(10);
-    b.push_back(20).push_back(10);
+    b.push_back(20).push_back(10).push_back(5);
 
     for(auto e: b){
         std::cout << e << ", ";
