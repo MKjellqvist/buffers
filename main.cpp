@@ -1,12 +1,19 @@
 #include <iostream>
 
 /**
- * Buffer, owning a resource
+ * Buffer, owning a resource.
+ *
+ * Illustrate Single responsibility principle.
  */
 class buffer{
 public:
     buffer(size_t size):first(new int[size]), last(first + size), size(0){
     }
+    /**
+     * Den här verkar krånglig.
+     * @param e element to insert
+     * @return the buffer object, allows for chaining.
+     */
     buffer& push_back(int e){
         first[size++] = e;
         return *this;
