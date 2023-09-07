@@ -17,13 +17,15 @@ class buffer{
 public:
     buffer(size_t size);
     buffer(const int* , size_t);
+    buffer(const buffer& b);
 
-    int* begin(){
-        return first;
-    }
-    int* end(){
-        return last;
-    }
+    size_t  size() const;
+
+    int* begin();
+    int* end();
+    const int* begin() const;
+    const int* end() const;
+
     int& operator[](size_t index);
 private:
     int* first;
