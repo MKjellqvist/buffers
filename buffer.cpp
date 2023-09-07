@@ -14,6 +14,13 @@ buffer::buffer(const int * src, size_t size): buffer(size) { // DRY, dont repeat
 buffer::buffer(const buffer &rhs): buffer(rhs.begin(), rhs.size()) {
 
 }
+buffer::buffer(buffer &&rhs):first(nullptr), last(nullptr) {
+    swap(rhs);
+}
+
+buffer::~buffer() {
+    delete []first;
+}
 
 int &buffer::operator[](size_t index) {
     return first[index];
@@ -37,4 +44,9 @@ const int* buffer::begin() const {
 
 const int* buffer::end() const {
     return last;
+}
+
+void buffer::swap(buffer &buf) {
+    std::swap(first, buf.first);
+    std::swap(last, buf.last);
 }

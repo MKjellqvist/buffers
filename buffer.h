@@ -17,7 +17,11 @@ class buffer{
 public:
     buffer(size_t size);
     buffer(const int* , size_t);
-    buffer(const buffer& b);
+    buffer(const buffer& rhs);
+
+    buffer(buffer&& rhs);
+
+    ~buffer();
 
     size_t  size() const;
 
@@ -26,11 +30,16 @@ public:
     const int* begin() const;
     const int* end() const;
 
+    buffer& operator=(const buffer& rhs);
+    buffer& operator=(buffer&& rhs);
+
     int& operator[](size_t index);
     int operator[](size_t index) const;
 private:
     int* first;
     int* last;
+
+    void swap(buffer &buffer);
 };
 
 
