@@ -27,6 +27,7 @@ public:
     const int* end() const;
 
     int& operator[](size_t index);
+    int operator[](size_t index) const;
 private:
     int* first;
     int* last;
