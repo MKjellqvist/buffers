@@ -15,16 +15,13 @@
  */
 class buffer{
 public:
-    buffer(size_t size);
+    explicit buffer(size_t size);
     buffer(const int* , size_t);
     buffer(const buffer& rhs);
-
     buffer(buffer&& rhs);
-
     ~buffer();
 
     size_t  size() const;
-
     int* begin();
     int* end();
     const int* begin() const;
