@@ -61,6 +61,12 @@ build CMakeFiles/tmp.dir/buffer.cpp.o: CXX_COMPILER__tmp_unscanned_Debug /home/m
   OBJECT_DIR = CMakeFiles/tmp.dir
   OBJECT_FILE_DIR = CMakeFiles/tmp.dir
 
+build CMakeFiles/tmp.dir/int_vector.cpp.o: CXX_COMPILER__tmp_unscanned_Debug /home/martin/ver/kod/c++/prmet_2023/int_vector.cpp || cmake_object_order_depends_target_tmp
+  DEP_FILE = CMakeFiles/tmp.dir/int_vector.cpp.o.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles/tmp.dir
+  OBJECT_FILE_DIR = CMakeFiles/tmp.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target tmp
@@ -69,7 +75,7 @@ build CMakeFiles/tmp.dir/buffer.cpp.o: CXX_COMPILER__tmp_unscanned_Debug /home/m
 #############################################
 # Link the executable tmp
 
-build tmp: CXX_EXECUTABLE_LINKER__tmp_Debug CMakeFiles/tmp.dir/main.cpp.o CMakeFiles/tmp.dir/buffer.cpp.o
+build tmp: CXX_EXECUTABLE_LINKER__tmp_Debug CMakeFiles/tmp.dir/main.cpp.o CMakeFiles/tmp.dir/buffer.cpp.o CMakeFiles/tmp.dir/int_vector.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/tmp.dir
   POST_BUILD = :
