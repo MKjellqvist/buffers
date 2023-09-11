@@ -30,8 +30,12 @@ public:
     const int* begin() const;
     const int* end() const;
 
-    buffer& operator=(const buffer& rhs);
-    buffer& operator=(buffer&& rhs);
+    /**
+     * https://stackoverflow.com/q/3279543/451600
+     * @param rhs
+     * @return
+     */
+    buffer& operator=(buffer rhs);
 
     int& operator[](size_t index);
     int operator[](size_t index) const;

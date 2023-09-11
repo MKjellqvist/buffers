@@ -22,6 +22,11 @@ buffer::~buffer() {
     delete []first;
 }
 
+buffer& buffer::operator=(buffer rhs){
+    swap(rhs);
+    return *this;
+}
+
 int &buffer::operator[](size_t index) {
     return first[index];
 }
